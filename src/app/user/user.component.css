@@ -1,0 +1,33 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(circle, #575757, #4d4d4d, #434343, #393939, #303030);
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 80vh;
+  color: #4CAF50;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 100px;
+}
