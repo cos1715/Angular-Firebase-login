@@ -60,5 +60,8 @@
     },
     "component": {
     }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }
