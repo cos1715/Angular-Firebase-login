@@ -1,18 +1,23 @@
-# Firebase Authentication with Angular
+# ELEKS Front-Camp 2018
 
-This project is part of an Angular tutorial where we explore how to setup a simple email/password as well as social login authentication workflows for Angular 5 apps using the awesome AngularFire2 library.
+* Course curator - [Volodymyr Shevchuk](https://github.com/dosandk)
+* Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
 
-Get the step by step free tutorial in https://angular-templates.io/tutorials/about/firebase-authentication-with-angular
+## Dictionary
+[Demo](https://angular-firebase-auth0-b5105.firebaseapp.com/login)  
+> Description: "Angular login app" - a program which can login.
+>
+> Main idea: This app was created to bring login to folks.
+>
+> For whom: For everyone.  
 
+## Tech stack
 
-**Please support this project by simply putting a Github star ⭐. Share this repo with friends on Twitter and everywhere else you can. 🙏 Thanks**
+* javascript 
+* angular 
+* typescript 
+* html/css
+* firebase
 
-## Installation
-
-Run `npm install` to install all the required dependencies
-
-Then run `ng serve` to start a dev server.
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-
-![](https://s3-us-west-2.amazonaws.com/angular-templates/tutorials/firebase-authentication-with-angular/firebase-tutorial-login-screenshot.png)
+## TODO
+* add something useful
