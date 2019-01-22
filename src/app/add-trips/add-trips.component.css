@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(circle, #575757, #4d4d4d, #434343, #393939, #303030);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+  color: #4CAF50;
+}
+
+.add-trip-form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+.form-btn {
+  width: 50vw;
+  text-align: center;
+}

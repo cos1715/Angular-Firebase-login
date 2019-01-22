@@ -1,0 +1,43 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="row">
+    <h2>Add Your Trips</h2>
+    <form [formGroup]="addTripForm" class="add-trip-form">
+      <div class="form-group">
+        <label>Trip Name</label>
+        <input type="text" class="form-control" formControlName="tripName">
+      </div>
+      <div class="form-group">
+        <label>Days count</label>
+        <input type="number" class="form-control" formControlName="days">
+      </div>
+      <div class="form-group">
+        <label>Day Cost</label>
+        <input type="number" class="form-control" formControlName="dayCost">
+      </div>
+      <div class="form-group">
+        <label>Tickets Cost</label>
+        <input type="number" class="form-control" formControlName="ticketsCost">
+      </div>
+      <div class="form-group">
+        <label>Hotel Cost</label>
+        <input type="number" class="form-control" formControlName="hotelCost">
+      </div>
+      <div class="form-group">
+        <label>Transport Cost</label>
+        <input type="number" class="form-control" formControlName="transportCost">
+      </div>
+      <div class="form-group">
+        <label>Start City</label>
+        <input type="text" class="form-control" formControlName="startCity">
+      </div>
+      <div class="form-group">
+        <label>End City</label>
+        <input type="text" class="form-control" formControlName="endCity">
+      </div>
+      <button type="submit" (click)="addTrip(addTripForm.value)" class="btn btn-primary form-btn">Add</button>
+    </form>
+    <h3><label class="success">{{successMessage}}</label></h3>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -19,6 +19,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { AllTripsComponent } from './all-trips/all-trips.component';
+import { AddTripsComponent } from './add-trips/add-trips.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,16 @@ import { NavComponent } from './nav/nav.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    AllTripsComponent,
+    AddTripsComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard],

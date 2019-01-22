@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../core/user.service';
-import { AuthService } from '../core/auth.service';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
+import { TripModel } from '../core/trip.model';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import * as firebase from 'firebase/app';
+
+
 
 @Component({
   selector: 'app-page-user',
@@ -11,39 +15,28 @@ import { FirebaseUserModel } from '../core/user.model';
   styleUrls: ['user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  tripCollection: AngularFirestoreCollection<TripModel>;
+  trips: Observable<TripModel[]>;
   user: FirebaseUserModel = new FirebaseUserModel();
-  profileForm: FormGroup;
 
   constructor(
-    public userService: UserService,
-    public authService: AuthService,
     private route: ActivatedRoute,
-    private fb: FormBuilder
-  ) {
-
-  }
+    private afs: AngularFirestore
+  ) { }
 
   ngOnInit(): void {
+    const email = firebase.auth().currentUser.email;
+
+    this.tripCollection = this.afs.collection<TripModel>('trips', ref => {
+      // return ref.where('loh', '==', 'loh');orderBy('loh')
+      return ref.where('creator', '==', email);
+    });
+    this.trips = this.tripCollection.valueChanges();
     this.route.data.subscribe(routeData => {
       const data = routeData['data'];
       if (data) {
         this.user = data;
-        this.createForm(this.user.name);
       }
     });
-  }
-
-  createForm(name) {
-    this.profileForm = this.fb.group({
-      name: [name, Validators.required]
-    });
-  }
-
-  save(value) {
-    this.userService.updateCurrentUser(value)
-      .then(res => {
-        console.log(res);
-      }, err => console.log(err));
   }
 }

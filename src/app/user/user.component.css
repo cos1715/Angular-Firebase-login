@@ -1,14 +1,17 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: radial-gradient(circle, #575757, #4d4d4d, #434343, #393939, #303030);
+}
+
+.main-content {
+  min-height: 80vh;
 }
 
 .row {
   display: flex;
   justify-content: flex-start;
   width: 100vw;
-  height: 80vh;
   color: #4CAF50;
 }
 
@@ -30,4 +33,14 @@
 .image {
   width: 100%;
   border-radius: 100px;
+}
+
+.trip-table {
+  margin: 0 auto;
+  max-width: 90vw;
+  color: #fff;
+}
+
+.table-header{
+  font-size: 20px;
 }

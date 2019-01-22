@@ -1,5 +1,14 @@
 <nav>
-  <ul class="nav justify-content-end">
+  <ul class="nav justify-content-end nav-menu">
+    <li class="nav-item">
+      <button type="button" (click)="navigate('trips')" class="btn nav-btn">All Trips</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" (click)="navigate('user')" class="btn nav-btn">My Trips</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" (click)="navigate('add-trips')" class="btn nav-btn">Add Trips</button>
+    </li>
     <li class="nav-item">
       <button type="button" (click)="logout()" class="btn nav-btn">Logout</button>
     </li>

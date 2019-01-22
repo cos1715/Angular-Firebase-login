@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../core/auth.service';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -11,12 +12,17 @@ export class NavComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {
 
   }
 
   ngOnInit() {
+  }
+
+  navigate(path) {
+    this.router.navigate([`/${path}`]);
   }
 
   logout() {
