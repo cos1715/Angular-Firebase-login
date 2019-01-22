@@ -5,6 +5,7 @@ import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { AddTripsComponent } from './add-trips/add-trips.component';
+import { AllTripsComponent } from './all-trips/all-trips.component';
 import { UserResolver } from './user/user.resolver';
 import { AuthGuard } from './core/auth.guard';
 
@@ -13,6 +14,6 @@ export const rootRouterConfig: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
   { path: 'user', component: UserComponent, resolve: { data: UserResolver } },
-  { path: 'trips', component: HeaderComponent, resolve: { data: UserResolver } },
+  { path: 'trips', component: AllTripsComponent, resolve: { data: UserResolver } },
   { path: 'add-trips', component: AddTripsComponent, resolve: { data: UserResolver } }
 ];

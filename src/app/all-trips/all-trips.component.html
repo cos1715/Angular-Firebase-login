@@ -1,3 +1,35 @@
-<p>
-  all-trips works!
-</p>
+<div class="container">
+  <app-header></app-header>
+  <div class="main-content">
+    <div class="trip-table">
+      <h3 class="table-name">All Trips</h3>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th class="table-header" scope="col">Trip Name</th>
+            <th class="table-header" scope="col">Days</th>
+            <th class="table-header" scope="col">Day Cost</th>
+            <th class="table-header" scope="col">Tickets Cost</th>
+            <th class="table-header" scope="col">Hotel Cost</th>
+            <th class="table-header" scope="col">Transport Cost</th>
+            <th class="table-header" scope="col">Start City</th>
+            <th class="table-header" scope="col">End City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let trip of trips | async">
+            <th scope="row">{{trip.tripName}}</th>
+            <td>{{trip.days}}</td>
+            <td>{{trip.dayCost}}</td>
+            <td>{{trip.ticketsCost}}</td>
+            <td>{{trip.hotelCost}}</td>
+            <td>{{trip.transportCost}}</td>
+            <td>{{trip.startCity}}</td>
+            <td>{{trip.endCity}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

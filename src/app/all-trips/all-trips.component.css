@@ -1,0 +1,26 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: radial-gradient(circle, #575757, #4d4d4d, #434343, #393939, #303030);
+}
+
+.main-content {
+  min-height: 80vh;
+}
+
+.table-name {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4CAF50;
+}
+
+.trip-table {
+  margin: 0 auto;
+  max-width: 90vw;
+  color: #fff;
+}
+
+.table-header {
+  font-size: 20px;
+}
