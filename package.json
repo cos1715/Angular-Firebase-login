@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "5.2.0",
     "@angular/router": "5.2.0",
     "angularfire2": "^5.0.0-rc.10",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "core-js": "^2.4.1",
     "firebase": "5.1.0",
     "ng2-bootstrap": "^1.4.0",
