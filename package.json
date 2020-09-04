@@ -27,7 +27,7 @@
     "firebase": "5.1.0",
     "ng2-bootstrap": "^1.4.0",
     "ngx-bootstrap": "^1.9.3",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "npm": "^6.4.1",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",
